@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"> <!--//앱 켰을 때 시작화면-->
+
+    <!--//프래그먼트 등록-->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.codes.mycafe.ui.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.codes.mycafe.ui.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_navigation_menu_to_navigation_menu_detail"
+            app:destination="@id/navigation_menu_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_order"
+        android:name="com.codes.mycafe.ui.OrderFragment"
+        android:label="@string/title_order"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/navigation_menu_detail"
+        android:name="com.codes.mycafe.ui.MenuDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_menu_detail" />
+</navigation>

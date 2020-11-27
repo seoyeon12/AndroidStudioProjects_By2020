@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmActivity">
+
+    <TextView
+        android:id="@+id/textViewNameT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="이름"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNameT"
+        app:layout_constraintStart_toEndOf="@+id/textViewNameT"
+        app:layout_constraintTop_toTopOf="@+id/textViewNameT" />
+
+    <TextView
+        android:id="@+id/textViewPhoneT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="전화번호"
+        app:layout_constraintStart_toStartOf="@+id/textViewNameT"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameT" />
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewPhoneT"
+        app:layout_constraintTop_toTopOf="@+id/textViewPhoneT" />
+
+    <TextView
+        android:id="@+id/textViewClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewClassT"
+        app:layout_constraintTop_toTopOf="@+id/textViewClassT" />
+
+    <TextView
+        android:id="@+id/textViewClassT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="당신은"
+        app:layout_constraintStart_toStartOf="@+id/textViewPhoneT"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneT" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="OK"
+        android:onClick="OnButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassT"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCancel"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:onClick="OnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonOk"
+        app:layout_constraintStart_toEndOf="@+id/buttonOk"
+        app:layout_constraintTop_toTopOf="@+id/buttonOk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
